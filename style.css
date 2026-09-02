@@ -1,0 +1,190 @@
+```css
+/* Grundinställningar */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+
+/* Navigation */
+
+header {
+    background-color: #222;
+    padding: 20px 10%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(255, 250, 250);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #cccccc;
+}
+
+
+/* Startsida */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background-color: white;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin: 10px 0;
+}
+
+.hero h3 {
+    font-size: 25px;
+    color: #5d5a5a;
+    margin-bottom: 20px;
+}
+
+
+/* Sektioner */
+
+.section {
+    padding: 80px 10%;
+}
+
+.section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+
+/* Knapp */
+
+.knapp {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+
+    background-color: #222;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.knapp:hover {
+    background-color: #555;
+}
+
+
+/* Projekt */
+
+.projekt-section {
+    background-color: white;
+}
+
+.projekt-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.projekt-kort {
+    flex: 1;
+    min-width: 250px;
+
+    background-color: #f5f5f5;
+    padding: 25px;
+
+    border: 1px solid #cac7c7;
+    border-radius: 5px;
+}
+
+.projekt-kort h3 {
+    margin-bottom: 15px;
+}
+
+.projekt-kort a {
+    display: inline-block;
+    margin-top: 20px;
+
+    color: #222;
+    font-weight: bold;
+}
+
+
+/* Kontakt */
+
+.kontakt {
+    text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Mobil */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .projekt-container {
+        flex-direction: column;
+    }
+
+}
+```
