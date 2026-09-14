@@ -133,7 +133,22 @@
     <!-- Footer -->
     <footer>
         <p>© 2026 Tuva Eliasson. Alla rättigheter reserverade.</p>
-    </footer>
+    <footer>
+        
+         <!-- Egna dataLayer-events -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        document.querySelectorAll('[data-projekt]').forEach(function (lank) {
+            lank.addEventListener('click', function () {
+                window.dataLayer.push({
+                    event: 'portfolio_project_click',
+                    project_name: lank.getAttribute('data-projekt'),
+                    project_category: 'Portfolio',
+                    click_location: 'Projektsektionen'
+                });
+            });
+        });
+         </script>
 </body>
 </html>
