@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's Your Wine?</title>
+<style> * { box-sizing: border-box; margin: 0; padding: 0; } body { background: #120d0b; color: #f5eee8; font-family: Arial, sans-serif; } .container { max-width: 700px; margin: 0 auto; padding: 100px 30px; text-align: center; } .eyebrow { font-size: 12px; letter-spacing: 3px; margin-bottom: 30px; opacity: 0.6; } h1 { font-size: 60px; line-height: 1; font-weight: 400; margin-bottom: 25px; } .intro { font-size: 20px; opacity: 0.7; margin-bottom: 40px; } button { background: #f5eee8; color: #120d0b; border: none; padding: 16px 28px; font-size: 16px; cursor: pointer; border-radius: 30px; } button:hover { opacity: 0.8; } .result { margin-top: 70px; } #weather { font-size: 18px; opacity: 0.7; margin-bottom: 20px; } #wine { font-size: 42px; font-weight: 400; margin-bottom: 15px; } #reason { font-size: 18px; opacity: 0.7; } </style>
+</head>
+<body>
+<main class="container">
+<p class="eyebrow">WEATHER × WINE</p>
+
+<h1>What's your<br> wine today?</h1>
+
+<p class="intro">
+  Let the weather decide.
+</p>
+
+<button id="wineButton">
+  Find my wine →
+</button>
+
+<section id="result" class="result">
+
+  <p id="weather"></p>
+
+  <h2 id="wine"></h2>
+
+  <p id="reason"></p>
+
+</section>
+</main>
+<script> const button = document.getElementById("wineButton"); const weather = document.getElementById("weather"); const wine = document.getElementById("wine"); const reason = document.getElementById("reason"); button.addEventListener("click", getWeather); async function getWeather() { const latitude = 59.3293; const longitude = 18.0686; const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,rain,weather_code`; try { const response = await fetch(url); const data = await response.json(); const temperature = data.current.temperature_2m; const rain = data.current.rain; weather.textContent = `Stockholm · ${temperature}°C · Rain: ${rain} mm`; if (temperature < 12) { wine.textContent = "Pinot Noir"; reason.textContent = "A light and fruity red wine for a cold evening."; } else { wine.textContent = "Sauvignon Blanc"; reason.textContent = "A fresh and crisp wine for a warmer day."; } } catch (error) { weather.textContent = "Could not load the weather."; console.error(error); } } </script>
+</body> </html>
