@@ -186,4 +186,249 @@ footer {
         flex-direction: column;
     }
 
+}/* =================================
+   PROJEKT 3
+   SÖMNBESVÄR
+   ================================= */
+
+.sleep-project {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 24px;
+}
+
+.sleep-header {
+    max-width: 750px;
+    margin-bottom: 60px;
+}
+
+.sleep-kicker {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+}
+
+.sleep-header h1 {
+    color: #ffffff;
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin: 0 0 25px;
+}
+
+.sleep-intro {
+    color: #dddddd;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 650px;
+}
+
+
+/* DIAGRAM */
+
+.sleep-chart-card {
+    background: #f3f3f0;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.sleep-chart-card h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.chart-description {
+    margin-bottom: 50px;
+    opacity: 0.65;
+}
+
+
+/* STAPLAR */
+
+.chart-group {
+    margin-bottom: 45px;
+}
+
+.chart-group h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.bar-row {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.bar-background {
+    width: 100%;
+    height: 45px;
+    background: #ddddda;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background: #9c9b9b;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-right: 12px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+
+    box-sizing: border-box;
+
+    border-radius: 6px;
+}
+
+.bar.current {
+    background: #424242;
+}
+
+
+/* RESULTAT */
+
+.sleep-result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    margin-top: 50px;
+    padding-top: 30px;
+
+    border-top: 1px solid #ccc;
+}
+
+.sleep-result div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sleep-result strong {
+    font-size: 42px;
+}
+
+.sleep-result span {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.65;
+}
+
+
+/* INFORMATION */
+
+.sleep-information {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+
+    margin-top: 80px;
+}
+
+.sleep-information h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sleep-information p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.7;
+}
+
+
+/* KÄLLA */
+
+.sleep-source {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 30px;
+
+    border-top: 1px solid #ccc;
+
+    margin-top: 80px;
+    padding-top: 25px;
+}
+
+.sleep-source strong {
+    display: block;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    margin-bottom: 7px;
+
+    opacity: 0.5;
+}
+
+.sleep-source p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* TILLBAKA */
+
+.back-link {
+    display: inline-block;
+
+    margin-top: 70px;
+
+    color: inherit;
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* MOBIL */
+
+@media (max-width: 700px) {
+
+    .sleep-project {
+        padding: 70px 20px;
+    }
+
+    .sleep-chart-card {
+        padding: 25px;
+    }
+
+    .sleep-information {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sleep-source {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sleep-result {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .sleep-source {
+        grid-template-columns: 1fr;
+    }
+
 }
