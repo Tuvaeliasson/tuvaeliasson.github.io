@@ -37,132 +37,45 @@
 
         </header>
 
+<!-- DIAGRAM -->
 
-        <!-- DIAGRAM -->
+<section class="sleep-chart-card">
 
-        <section class="sleep-chart-card">
+    <h2>2006 jämfört med 2024</h2>
 
-            <h2>
-                2006 jämfört med 2024
-            </h2>
+    <p class="chart-description">
+        Andel personer i åldern 16–29 år som uppger
+        lätta sömnbesvär.
+    </p>
 
-            <p class="chart-description">
-                Andel personer i åldern 16–29 år som uppger
-                lätta sömnbesvär.
-            </p>
+    <div class="chart-container">
+        <canvas id="sleepChart"></canvas>
+    </div>
 
+    <div class="sleep-result">
 
-            <!-- KVINNOR -->
+        <div>
+            <strong>+5</strong>
 
-            <div class="chart-group">
+            <span>
+                procentenheter<br>
+                bland kvinnor
+            </span>
+        </div>
 
-                <h3>Kvinnor</h3>
+        <div>
+            <strong>+8</strong>
 
-                <div class="bar-row">
+            <span>
+                procentenheter<br>
+                bland män
+            </span>
+        </div>
 
-                    <span>2006</span>
+    </div>
 
-                    <div class="bar-background">
-
-                        <div class="bar"
-                             style="width: 34%;">
-                            34 %
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="bar-row">
-
-                    <span>2024</span>
-
-                    <div class="bar-background">
-
-                        <div class="bar current"
-                             style="width: 39%;">
-                            39 %
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- MÄN -->
-
-            <div class="chart-group">
-
-                <h3>Män</h3>
-
-                <div class="bar-row">
-
-                    <span>2006</span>
-
-                    <div class="bar-background">
-
-                        <div class="bar"
-                             style="width: 25%;">
-                            25 %
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="bar-row">
-
-                    <span>2024</span>
-
-                    <div class="bar-background">
-
-                        <div class="bar current"
-                             style="width: 33%;">
-                            33 %
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- RESULTAT -->
-
-            <div class="sleep-result">
-
-                <div>
-
-                    <strong>+5</strong>
-
-                    <span>
-                        procentenheter<br>
-                        bland kvinnor
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>+8</strong>
-
-                    <span>
-                        procentenheter<br>
-                        bland män
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
+</section>
+       
 
         <!-- FÖRKLARING -->
 
@@ -273,6 +186,68 @@
         </a>
 
     </main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+    const ctx = document.getElementById('sleepChart');
+
+    new Chart(ctx, {
+
+        type: 'bar',
+
+        data: {
+
+            labels: ['Kvinnor', 'Män'],
+
+            datasets: [
+
+                {
+                    label: '2006',
+                    data: [34, 25],
+                    backgroundColor: '#999999'
+                },
+
+                {
+                    label: '2024',
+                    data: [39, 33],
+                    backgroundColor: '#111111'
+                }
+
+            ]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            scales: {
+
+                y: {
+
+                    beginAtZero: true,
+
+                    max: 50,
+
+                    ticks: {
+
+                        callback: function(value) {
+                            return value + '%';
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    });
+
+</script>
+
 
 </body>
 
