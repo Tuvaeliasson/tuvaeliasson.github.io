@@ -457,3 +457,186 @@ footer {
 .growth-section {
     background-color: #f4f3f3;
 }
+/* =================================
+   GROWTH MARKETING DASHBOARD
+   ================================= */
+
+.dashboard-section {
+    background-color: #f5f5f5;
+    margin: 40px 10%;
+    padding: 45px;
+    border-radius: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.dashboard-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.dashboard-header h2 {
+    font-size: 35px;
+}
+
+.dashboard-period {
+    font-size: 13px;
+    color: #777;
+    border: 1px solid #d0d0d0;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+
+/* KPI-KORT */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.dashboard-card {
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.dashboard-card p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.dashboard-card h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.dashboard-positive {
+    font-size: 13px;
+    color: #555;
+}
+
+
+/* DIAGRAM */
+
+.dashboard-chart {
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.chart-heading h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.chart-heading p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.chart-bars {
+    height: 220px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 15px;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.chart-column {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.chart-bar {
+    width: 100%;
+    max-width: 45px;
+    background-color: #999;
+    border-radius: 6px 6px 0 0;
+    transition: background-color 0.3s;
+}
+
+.chart-bar:hover {
+    background-color: #555;
+}
+
+.chart-column span {
+    font-size: 12px;
+    color: #777;
+    transform: translateY(30px);
+}
+
+
+/* INSIGHT */
+
+.dashboard-insight {
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.dashboard-insight strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.dashboard-insight p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* MOBIL */
+
+@media (max-width: 700px) {
+
+    .dashboard-section {
+        margin: 30px 5%;
+        padding: 25px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-card {
+        padding: 15px;
+    }
+
+    .dashboard-card h3 {
+        font-size: 23px;
+    }
+
+    .chart-bars {
+        gap: 8px;
+    }
+
+}
