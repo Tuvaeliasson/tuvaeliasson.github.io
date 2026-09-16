@@ -235,7 +235,7 @@
                 Vill du komma i kontakt med mig?
             </p>
 
-            <a href="mailto:eliassontuva@icloud.com" class="knapp">
+            <a href="mailto:eliassontuva@icloud.com" class="knapp" id="kontakt-knapp">
                 Kontakta mig
             </a>
 
@@ -263,6 +263,21 @@
                 });
             });
         });
+
+
+         // EVENT 2: Klick på kontaktknappen
+    var kontaktKnapp = document.getElementById('kontakt-knapp');
+
+    if (kontaktKnapp) {
+        kontaktKnapp.addEventListener('click', function () {
+            window.dataLayer.push({
+                event: 'portfolio_contact_click',
+                contact_type: 'email',
+                click_location: 'Kontaktsektionen'
+            });
+        });
+    }
+
          </script>
 </body>
 </html>
