@@ -704,8 +704,11 @@ max-width: 850px;
 }
 
 .question-card {
-background-color: white;
-border-bottom: 1px solid #ddd;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
 }
 
 .question-card:first-child {
@@ -713,19 +716,20 @@ border-top: 1px solid #ddd;
 }
 
 .question-button {
-width: 100%;
-padding: 25px 0;
-border: none;
-background: transparent;
-display: flex;
-justify-content: space-between;
-align-items: center;
-text-align: left;
-cursor: pointer;
-font-family: inherit;
-font-size: 18px;
-font-weight: 700;
-color: #222;
+    width: 100%;
+    padding: 25px 35px;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    box-sizing: border-box;
 }
 
 .question-button:hover {
