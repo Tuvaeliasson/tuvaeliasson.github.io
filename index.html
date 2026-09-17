@@ -189,6 +189,71 @@
 
 </section>
 
+<!-- Fråga mig något -->
+
+<section class="questions-section">
+
+
+<div class="questions-header">
+    <p class="questions-label">LÄR KÄNNA MIG</p>
+    <h2>Fråga mig något</h2>
+    <p>
+        Några saker om hur jag tänker, vad jag tycker är intressant
+        och vad som inspirerar mig.
+    </p>
+</div>
+
+<div class="questions-container">
+
+    <!-- Fråga 1 -->
+    <div class="question-card">
+        <button class="question-button" type="button">
+            <span>Vad tycker jag om att lösa?</span>
+            <span class="question-icon">+</span>
+        </button>
+
+        <div class="question-answer">
+            <p>
+                Jag tycker om att hitta kreativa lösningar på problem
+                och förstå hur små förändringar kan göra stor skillnad.
+            </p>
+        </div>
+    </div>
+
+    <!-- Fråga 2 -->
+    <div class="question-card">
+        <button class="question-button" type="button">
+            <span>Vad tycker jag är intressant?</span>
+            <span class="question-icon">+</span>
+        </button>
+
+        <div class="question-answer">
+            <p>
+                Hur data kan användas för att förstå människor
+                och förbättra digitala upplevelser.
+            </p>
+        </div>
+    </div>
+
+    <!-- Fråga 3 -->
+    <div class="question-card">
+        <button class="question-button" type="button">
+            <span>Vad är något jag alltid är nyfiken på?</span>
+            <span class="question-icon">+</span>
+        </button>
+
+        <div class="question-answer">
+            <p>
+                Varför människor gör vissa val digitalt –
+                vad som får dem att klicka, stanna kvar eller komma tillbaka.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
 
         <!-- Projekt -->
         <section id="projekt" class="section projekt-section">
@@ -279,5 +344,21 @@
     }
 
          </script>
+         <script>
+    // Fråga mig något – öppna och stäng svar
+
+    document.querySelectorAll('.question-button').forEach(function (button) {
+
+        button.addEventListener('click', function () {
+
+            var card = button.parentElement;
+
+            card.classList.toggle('active');
+
+        });
+
+    });
+</script>
+
 </body>
 </html>
